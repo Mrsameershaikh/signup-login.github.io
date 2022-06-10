@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Successful</title>
+    <style>
+        body{
+            background-image: url('../webapp/images/bg2.jpg');
+        }
+        h1{
+            text-align: center;
+            color: white;
+            text-shadow: 5px 5px 10px white;
+        }
+        label{
+            color: white;
+        }
+        #result form{
+            margin-left: 18rem;
+            margin-top: 6rem;
+
+
+        }
+        #result input{
+            background-color: rgb(231, 209, 209);
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="index.php"><button>Logout</button></a>
+    <h1>Enter 5 numbers to find the Mean, Median, Mode</h1>
+    <div class="calc">
+        <form action="">
+            
+            <label for="">Number 1</label>
+            <input type="text" name="" id="N1">
+            <label for="">Number 2</label>
+            <input type="text" name="" id="N2">
+            <label for="">Number 3</label>
+            <input type="text" name="" id="N3">
+            <label for="">Number 4</label>
+            <input type="text" name="" id="N4">
+            <label for="">Number 5</label>
+            <input type="text" name="" id="N5">
+            
+        </form>
+     </div>
+     
+     <div id="result">
+        <form action="">
+        
+            <label for="">Mean</label>
+            <input type="text" name="" id="mean">
+            <label for="">Median</label>
+            <input type="text" name="" id="median">
+            <label for="">Mode</label>
+            <input type="text" name="" id="mode">
+            <button onclick="mean()" value="calculate">Calculate</button>
+        </form>
+        
+     </div>
+     
+     <script>
+         function mean(){ 
+            let n1=parseInt(document.getElementById("N1").value);
+            let n2=parseInt(document.getElementById("N2").value);
+            let n3=parseInt(document.getElementById("N3").value);
+            let n4=parseInt(document.getElementById("N4").value);
+            let n5=parseInt(document.getElementById("N5").value);
+            let mean=n1+n2+n3+n4+n5/5;
+            document.getElementById("mean").innerHTML=mean;
+            // document.getElementById("median").innerText=median;
+            // document.getElementById("mode").innerText=mode;
+         }
+     </script>
+     
+</body>
+</html>
